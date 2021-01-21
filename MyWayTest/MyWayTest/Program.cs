@@ -223,6 +223,27 @@ namespace MyWayTest
                             break;
                         }
                     //modify case
+                    case "e":
+                    case "E":
+                        //call the regex operation
+                        task = regexOperation(userInput.Input, userList.CurrentList);
+
+                        //if there were any errors then break
+                        if (task[0] == "false")
+                        {
+                            break;
+                        }
+
+                        //get the user input and then trim any proceeding empty white spaces
+                        userInput.Input = userInput.Input.Substring(Int32.Parse(task[2]));
+                        string userTrim = userInput.Input.TrimStart(' ');
+                        //get the index to replace
+                        int replaceText = Int32.Parse(task[1]) - 1;
+
+                        //remove the old value and insert the new one
+                        userList.CurrentList.RemoveAt(replaceText);
+                        userList.CurrentList.Insert(replaceText, userTrim);
+                        break;
 
                     //TODO load case
                     case "load":
