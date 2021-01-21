@@ -27,12 +27,14 @@ namespace MyWayTest
             set { input = value; }
         }
     }
-    class RegexInfo {
+    class RegexInfo
+    {
         private int regexNumberOutput;
         private int regexIndexOutput;
 
-    
-        public int RegexNumberOutput {
+
+        public int RegexNumberOutput
+        {
             get { return regexNumberOutput; }
             set { regexNumberOutput = value; }
         }
@@ -67,7 +69,7 @@ namespace MyWayTest
             RegexInfo regexInfo = new RegexInfo();
             string[] task = { "", "", "" };
 
-           
+
 
 
             //simple bool to check if the user wants to quit or not
@@ -133,7 +135,10 @@ namespace MyWayTest
                     //insert case
                     case "I":
                     case "i":
+                        //call the regex operation
                         task = regexOperation(userInput.Input, userList.CurrentList);
+
+                        //if there were any errors then break
                         if (task[0] == "false")
                         {
                             break;
@@ -145,7 +150,7 @@ namespace MyWayTest
 
                         //insert the user input text at the requested line number
                         //This will allow user to insert blank lines of text. Unsure if this should be allowed or not. Checking length then prompting y/n answer from user could be better.
-                        userList.CurrentList.Insert(Int32.Parse(task[1])-1, lineTrimmed);
+                        userList.CurrentList.Insert(Int32.Parse(task[1]) - 1, lineTrimmed);
                         //acknowledgement of user input
                         Console.WriteLine("You have added the following text to line " + (Int32.Parse(task[1])) + ": " + lineTrimmed);
                         break;
@@ -153,15 +158,17 @@ namespace MyWayTest
                     //delete case
                     case "d":
                     case "D":
-
+                        //call the regex operation
                         task = regexOperation(userInput.Input, userList.CurrentList);
+
+                        //if there were any errors then break
                         if (task[0] == "false")
                         {
                             break;
                         }
                         else
                         {
-                            userList.CurrentList.RemoveAt(Int32.Parse(task[1]));
+                            userList.CurrentList.RemoveAt(Int32.Parse(task[1]) - 1);
                             break;
                         }
 
@@ -169,13 +176,52 @@ namespace MyWayTest
                     //replace case
                     case "r":
                     case "R":
-
+                        //call the regex operation
                         task = regexOperation(userInput.Input, userList.CurrentList);
+
+                        //if there were any errors then break
                         if (task[0] == "false")
                         {
                             break;
                         }
-                        break;
+                        else
+                        {
+                            // get the first number and value to save
+                            int firstLine = Int32.Parse(task[1]) - 1;
+                            string firstText = userList.CurrentList[firstLine];
+                            userInput.Input = userInput.Input.Substring(Int32.Parse(task[2]));
+                            //ensure there is a second value to switch
+                            task = regexOperation(userInput.Input, userList.CurrentList);
+                            //if not break
+                            if (task[0] == "false")
+                            {
+                                break;
+                            }
+                            //save this second value
+                            int secondLine = Int32.Parse(task[1]) - 1;
+                            string secondText = userList.CurrentList[secondLine];
+
+                            //begin the replacement process
+
+                            //two if statements to determine which process to do first, given that the remove at function could accidently remove a incorrect value if done out of sequeence.
+                            if (secondLine > firstLine)
+                            {
+                                userList.CurrentList.Insert(secondLine, firstText);
+                                userList.CurrentList.RemoveAt(firstLine);
+
+                                userList.CurrentList.RemoveAt(secondLine);
+                                userList.CurrentList.Insert(firstLine, secondText);
+                            }
+                            else if (firstLine > secondLine)
+                            {
+                                userList.CurrentList.Insert(firstLine, secondText);
+                                userList.CurrentList.RemoveAt(secondLine);
+
+                                userList.CurrentList.RemoveAt(firstLine);
+                                userList.CurrentList.Insert(secondLine, firstText);
+                            }
+                            break;
+                        }
                     //modify case
 
                     //TODO load case
@@ -224,7 +270,7 @@ namespace MyWayTest
                 {
                     Console.WriteLine("You have input as your number: " + lineString);
                     output[0] = "true";
-                    output[1] = ""+match.Value;
+                    output[1] = "" + match.Value;
                     output[2] = "" + search;
                     return output;
                 }
