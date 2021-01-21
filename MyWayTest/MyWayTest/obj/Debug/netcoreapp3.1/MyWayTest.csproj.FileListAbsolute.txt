@@ -1,0 +1,11 @@
+C:\Users\Charles\source\repos\MyWayTest\MyWayTest\obj\Debug\netcoreapp3.1\MyWayTest.csprojAssemblyReference.cache
+C:\Users\Charles\source\repos\MyWayTest\MyWayTest\obj\Debug\netcoreapp3.1\MyWayTest.AssemblyInfoInputs.cache
+C:\Users\Charles\source\repos\MyWayTest\MyWayTest\obj\Debug\netcoreapp3.1\MyWayTest.AssemblyInfo.cs
+C:\Users\Charles\source\repos\MyWayTest\MyWayTest\bin\Debug\netcoreapp3.1\MyWayTest.exe
+C:\Users\Charles\source\repos\MyWayTest\MyWayTest\bin\Debug\netcoreapp3.1\MyWayTest.deps.json
+C:\Users\Charles\source\repos\MyWayTest\MyWayTest\bin\Debug\netcoreapp3.1\MyWayTest.runtimeconfig.json
+C:\Users\Charles\source\repos\MyWayTest\MyWayTest\bin\Debug\netcoreapp3.1\MyWayTest.runtimeconfig.dev.json
+C:\Users\Charles\source\repos\MyWayTest\MyWayTest\bin\Debug\netcoreapp3.1\MyWayTest.dll
+C:\Users\Charles\source\repos\MyWayTest\MyWayTest\bin\Debug\netcoreapp3.1\MyWayTest.pdb
+C:\Users\Charles\source\repos\MyWayTest\MyWayTest\obj\Debug\netcoreapp3.1\MyWayTest.dll
+C:\Users\Charles\source\repos\MyWayTest\MyWayTest\obj\Debug\netcoreapp3.1\MyWayTest.pdb

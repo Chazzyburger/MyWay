@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWayTest", "MyWayTest\MyWayTest.csproj", "{390A31F1-26AD-4F72-9369-4F8702A55E7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{390A31F1-26AD-4F72-9369-4F8702A55E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390A31F1-26AD-4F72-9369-4F8702A55E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390A31F1-26AD-4F72-9369-4F8702A55E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390A31F1-26AD-4F72-9369-4F8702A55E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {526966CF-34DA-42A4-9F51-382F8CA37575}
+	EndGlobalSection
+EndGlobal
