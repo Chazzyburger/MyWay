@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Charles\\source\\repos\\MyWayTest\\MyWayTest\\MyWayTest.csproj",
+      "projectUniqueName": "E:\\Github\\MyWay\\MyWay\\MyWayTest\\MyWayTest\\MyWayTest.csproj",
       "projectName": "MyWayTest",
-      "projectPath": "C:\\Users\\Charles\\source\\repos\\MyWayTest\\MyWayTest\\MyWayTest.csproj",
+      "projectPath": "E:\\Github\\MyWay\\MyWay\\MyWayTest\\MyWayTest\\MyWayTest.csproj",
       "packagesPath": "C:\\Users\\Charles\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Charles\\source\\repos\\MyWayTest\\MyWayTest\\obj\\",
+      "outputPath": "E:\\Github\\MyWay\\MyWay\\MyWayTest\\MyWayTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Microsoft\\Xamarin\\NuGet\\"

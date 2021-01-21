@@ -50,6 +50,10 @@ namespace MyWayTest
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("MyWay Interview Exercise.");
+            Console.WriteLine("Created by Charles Cowan. \n");
+            Console.WriteLine("Greetings user! Please enter any commands to continue. Enter '?' for a list of commands.");
+
             //create the default list so that the program has it ready to replace the current one if that functionality is needed
             List<string> defaultList = new List<string> {
                 "Welcome to the timewarp of programs!",
@@ -243,6 +247,18 @@ namespace MyWayTest
                         //remove the old value and insert the new one
                         userList.CurrentList.RemoveAt(replaceText);
                         userList.CurrentList.Insert(replaceText, userTrim);
+                        break;
+
+                    //assistance case to assist user
+                    case "?":
+                        Console.WriteLine("'l' - Display all lines of text currently held by the program.");
+                        Console.WriteLine("'a' - Add a new line of text to the end of those currently held by the program.");
+                        Console.WriteLine("'i' - Insert to the specified line number the following text");
+                        Console.WriteLine("'d' - Delete the specified line number of text");
+                        Console.WriteLine("'r' - Swap the text at the specified line number with the text at the following line number");
+                        Console.WriteLine("'e' - Change the text at the specified line number with the succeeding text");
+                        // Console.WriteLine("'L' - Load a new batch of text from the specified filename");
+                        // Console.WriteLine("'S' - Save the current lines of text to a specified filename");
                         break;
 
                     //TODO load case
